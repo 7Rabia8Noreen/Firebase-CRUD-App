@@ -36,6 +36,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       setState(() {
                         loading= false;
                       });
+                      Constants().showToastMessage(value.user!.email.toString());
 
                     }).onError((error, stackTrace) {
                        setState(() {
