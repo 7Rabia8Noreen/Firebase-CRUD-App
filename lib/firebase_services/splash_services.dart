@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crud/pages/auth/login_page.dart';
+import 'package:firebase_crud/pages/firestore/insert_data_page.dart';
+import 'package:firebase_crud/pages/firestore/list_page.dart';
 import 'package:firebase_crud/pages/posts/posts_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +13,7 @@ class SplashServices{
     final user= _auth.currentUser;
      if(user !=null){
        Timer(Duration(seconds: 3), 
-     () => Navigator.push(context, MaterialPageRoute(builder: (context) => PostsPage(),),),
+     () => Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage(),),),
      );
      }
      else{
